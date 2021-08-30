@@ -1,7 +1,6 @@
 # Homework Python I
 
 # 1. Да се напише циклус во кој ќе се испринтаат броевите од 50 до 100
-from typing import List
 
 print('Prva:\n')
 for i in range(50, 101):
