@@ -1,4 +1,4 @@
-#
+# class No. 3
 # # a flag used in the cycle must be defined INSIDE the cycle !!!
 #
 # for i in range(1, 50):
@@ -65,6 +65,59 @@ print(f'Sumata na elementite na listata {list1} e {s}\n')
 list5 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 # indexi=[0 , 1, 2,   3, 4,  5,  6,  7,   8,  9]
 print(f'Listata {list5} ima izbrisani elementi \n')
-for i in range(2, len(list5), 2):
-    print(list5.pop(i))
+# for i in range(2, len(list5), 2):
+#     print(list5.pop(i))
 
+
+# class No. 4 - funkcii
+
+# def FunctionName(argument1, argument2 ... argumentn):
+# (as many arguments as needed)
+# pass
+
+# def ImeNaFunkcija(ime, jazik, lowlvl=True):
+#     pass
+
+
+list1 = [i for i in range(1, 6)]
+print(list1)
+
+
+def sumNum(l):
+    s = 0
+    s = s + sum(l[0:len(l)])
+    # for i in l:
+    #     s += i
+    return s
+
+
+print(sumNum(list1))
+
+
+# def NajdiMax(n1, n2, n3):
+#     s = []
+    # s = [n1, n2, n3]
+    # return (max(s)
+
+
+# print(NajdiMax(1,2,3))
+# n1 = float(input())
+# n2 = float(input())
+# n3 = float(input())
+# print(NajdiMax(n1, n2, n3))
+
+exampleList = [1, 5, 9, [4, 7, 3], ['str1', 'str2', True]]
+print(exampleList[3][1], exampleList[4][1])
+
+exampleList1 = [[True, False], [1, 2, 3, [4, 5, 6]], 'Python1', (1.2, 4.6, [3.7])]
+print(exampleList1[0][1], exampleList1[1][3][1], exampleList1[3][2][0])
+
+def triagolnik(side1, side2, side3):
+    if side1 == side2 == side3:
+        print('Triagolnikot e ramnostran')
+    elif side1 == side2 or side1 == side3 or side1 == side3:
+        print('Triagolnikot e ramnokrak')
+    else:
+        print('Triagolnikot e raznostran')
+    return
+triagolnik(1, 2, 4)
