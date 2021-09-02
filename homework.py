@@ -74,7 +74,7 @@ print(f'Indeksot na koj se naogja elementot "orange" od tuple {cTuple} e {indeks
 prv_el = list(cTuple[0])
 print(f'Dolzinata na prviot element vo tuple {cTuple} odnosno elementot {cTuple[0]} e {len(prv_el)}.\n')
 
-# 10. 10. Од следниот dictionary да се испринтаат само вредностите за клучот (so if uslov) city:
+# 10. Од следниот dictionary да се испринтаат само вредностите за клучот (so if uslov) city:
 # dict = {
 # “city”: “New York”,
 # “country”: “New York”,
@@ -112,8 +112,26 @@ print(f"go imame slednoto resenie: {list16}.\n")
 # aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 aLList = list(aTuple[1])+list(aTuple[2])
+nova_lista = []
 for num in aLList:
-    fl = True
     if num % 5 != 0:
         fl = False
-print(f'Prviot i vtoriot element od {aTuple} se dellivi so 5: {fl}.')
+        nova_lista.append(fl)
+    else:
+        fl = True
+        nova_lista.append(fl)
+fl1 = [i for i in nova_lista[:3]]
+fl2 = [i for i in nova_lista[4:6]]
+for i in range(3):
+    if fl1[i] == True:
+        fl11 = True
+    else:
+        fl11 = False
+        break
+for i in range(2):
+    if fl2[i] == True:
+        fl22 = True
+    else:
+        fl22 = False
+        break
+print(f'Prviot element od {aTuple} e delliv so 5: {fl11} i vtoriot element e delliv so 5: {fl22}.')
