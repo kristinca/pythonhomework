@@ -116,6 +116,7 @@ aLList = list(aTuple[1])+list(aTuple[2])
 len1 = len(aTuple[1])
 len2 = len(aTuple[2])
 # dolzinata na prviot i vtoriot element od aTuple ni treba za resenieto
+
 nova_lista = []
 for num in aLList:
     if num % 5 != 0:
