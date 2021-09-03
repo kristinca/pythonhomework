@@ -110,8 +110,12 @@ print(f"go imame slednoto resenie: {list16}.\n")
 # 17. Бонус задача: Да се провери дали првиот и вториот елемент од оваа листа се
 # деливи со 5.
 # aTuple = ("orange", [10, 20, 30], (5, 15, 25))
-aTuple = ("orange", [10, 20, 30], (5, 15, 25))
+aTuple = ("orange", [10, 20, 5, 20, 23, 1], (5, 15, 555, 25))
 aLList = list(aTuple[1])+list(aTuple[2])
+# indexi : lista=> (0, 1, 2, ... n-1), n = No. of elements
+len1 = len(aTuple[1])
+len2 = len(aTuple[2])
+# dolzinata na prviot i vtoriot element od aTuple ni treba za resenieto
 nova_lista = []
 for num in aLList:
     if num % 5 != 0:
@@ -120,18 +124,8 @@ for num in aLList:
     else:
         fl = True
         nova_lista.append(fl)
-fl1 = [i for i in nova_lista[:3]]
-fl2 = [i for i in nova_lista[4:6]]
-for i in range(3):
-    if fl1[i] == True:
-        fl11 = True
-    else:
-        fl11 = False
-        break
-for i in range(2):
-    if fl2[i] == True:
-        fl22 = True
-    else:
-        fl22 = False
-        break
-print(f'Prviot element od {aTuple} e delliv so 5: {fl11} i vtoriot element e delliv so 5: {fl22}.')
+fl1 = [i for i in nova_lista[:len1]]
+fl2 = [i for i in nova_lista[-len2:]]
+print(f'Elementite 1 i 2 od {aTuple} se dellivi so 5:'
+      f'\n element No. 1 = {aTuple[1]} : {not(False in fl1)} '
+      f'\n element No. 2 = {aTuple[2]} : {not(False in fl2)}.')
