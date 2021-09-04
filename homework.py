@@ -19,7 +19,8 @@ for i in range(50, 101):
 # 4. Да се напише циклус со кој ќе се пресмета сума на елементите од следната листа
 # list1 =[10,20,30,40,50,60,70,80,90,100]
 print('\nNo.4:\n')
-list4 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# list4 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+list4 = [i for i in range(10, 110, 10)]
 s = 0
 for num in list4:
     s = s + num
@@ -29,8 +30,9 @@ print(f'Sumata na elementite na listata {list4} e {s}.')
 # елемент од листата. list1 =[10,20,30,40,50,60,70,80,90,100] -> 30, 60 и 90 треба да бидат
 # избришани со циклус и на крајот да се испринта листата без тие елементи.
 print('\nNo.5:\n')
-list5 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-# indexi=[0 , 1, 2,   3, 4,  5,  6,  7,   8,  9]
+# list5 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+list5 = [i for i in range(10, 110, 10)]
+# indexi=[0 , 1, 2, ... 9] => [0, 1, 2, ... n-1], n = No. elements of a list
 print(f'Listata {list5} ima izbrisani elementi \n')
 for i in range(2, 8, 2):
     print(list5.pop(i))
@@ -127,9 +129,7 @@ print(f'go imame slednoto resenie: {list15}.')
 # без бројот 20.
 # list1 = [5, 20, 15, 20, 25, 50, 20]
 print('\nNo.16:\n')
-list16 = [5, 20, 15, 20, 25, 50, 20, 14, 20, 5]
-# n = [i for i in list16 if i == 20]
-# print(n)
+list16 = [5, 20, 15, 20, 25, 50, 20]
 print(f'Vo listata {list16} go briseme elementot 20 taka sto')
 for e in list16:
     if e == 20:
@@ -140,18 +140,16 @@ print(f"go imame slednoto resenie: {list16}.")
 # деливи со 5.
 # aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 print('\nNo.17:\n')
-aTuple = ("orange", [10, 20, 5, 20, 18], (5, 15, 555, 25))
+aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 aLList = list(aTuple[1])+list(aTuple[2])
 len1 = len(aTuple[1])
 len2 = len(aTuple[2])
 nova_lista = []
 for num in aLList:
     if num % 5 != 0:
-        fl = False
-        nova_lista.append(fl)
+        nova_lista.append(False)
     else:
-        fl = True
-        nova_lista.append(fl)
+        nova_lista.append(True)
 print(f'Elementite 1 i 2 od {aTuple} se dellivi so 5:'
       f'\n element No. 1 = {aTuple[1]} : {not(False in nova_lista[:len1])} '
       f'\n element No. 2 = {aTuple[2]} : {not(False in nova_lista[-len2:])}.')
