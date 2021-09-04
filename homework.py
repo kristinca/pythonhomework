@@ -75,8 +75,8 @@ print(f'Indeksot na koj se naogja elementot "orange" od tuple {cTuple} e {ind}.'
 # 9. Бонус задача: Да се напише циклус со кој ќе се пресмета и испринта должина на
 # првиот елемент од cTuple, односно должина на зборот “lemon”.
 print('\nNo.9:\n')
-prv_el = list(cTuple[1])
-print(f'Dolzinata na prviot element vo tuple {cTuple} odnosno elementot {cTuple[1]} e {len(prv_el)}.')
+prv_el = list(cTuple[0])
+print(f'Dolzinata na prviot element vo tuple {cTuple} odnosno elementot {cTuple[0]} e {len(prv_el)}.')
 
 # 10. Од следниот dictionary да се испринтаат само вредностите за клучот (so if uslov) city:
 # dict = {
