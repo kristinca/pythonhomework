@@ -38,6 +38,12 @@ for i in range(2, 8, 2):
     print(list5.pop(i))
 print(f'\nI sega ima elementi : {list5}.')
 
+# j = 2
+# while j <= (len(list5)):
+#     list5.remove(list5[j])
+#     j += 2
+# print(f'{list5} bez sekoj tret element, izbrisani so while cycle.')
+
 # 6. Да се напише циклус вo кој ќе се избришат непарните броеви од дадениот tuple.(Прво
 # правиме циклус кој ќе го изминува/итерира дадениот tuple, потоа проверуваме кој број
 # е непарен и на крајот правиме remove/pop на тој број)
@@ -65,10 +71,9 @@ print(f'Elementi od {bTuple} koi se dellivi so 10 se {del_so_10}.')
 # cTuple = (“lemon”, “blueberry”, “strawberry”, “apple”, “orange”)
 print('\nNo.8:\n')
 cTuple = ('lemon', 'blueberry', 'strawberry', 'apple', 'orange')
-cList = list(cTuple)
 ind = 0
-for i in range(len(cList)):
-    if cList[i] == 'orange':
+for i in range(len(cTuple)):
+    if cTuple[i] == 'orange':
         ind = i
 print(f'Indeksot na koj se naogja elementot "orange" od tuple {cTuple} e {ind}.')
 
@@ -142,8 +147,6 @@ print(f"go imame slednoto resenie: {list16}.")
 print('\nNo.17:\n')
 aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 aLList = list(aTuple[1])+list(aTuple[2])
-len1 = len(aTuple[1])
-len2 = len(aTuple[2])
 nova_lista = []
 for num in aLList:
     if num % 5 != 0:
@@ -151,5 +154,5 @@ for num in aLList:
     else:
         nova_lista.append(True)
 print(f'Elementite 1 i 2 od {aTuple} se dellivi so 5:'
-      f'\n element No. 1 = {aTuple[1]} : {not(False in nova_lista[:len1])} '
-      f'\n element No. 2 = {aTuple[2]} : {not(False in nova_lista[-len2:])}.')
+      f'\n element No. 1 = {aTuple[1]} : {not(False in nova_lista[:len(aTuple[1])])} '
+      f'\n element No. 2 = {aTuple[2]} : {not(False in nova_lista[-len(aTuple[2]):])}.')
