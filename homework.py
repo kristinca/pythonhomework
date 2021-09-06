@@ -141,6 +141,11 @@ for e in list16:
         list16.remove(e)
 print(f"go imame slednoto resenie: {list16}.")
 
+# resenie so while cycle
+# while 20 in list16:
+#     list16.remove(20)
+# print(list16)
+
 # 17. Бонус задача: Да се провери дали првиот и вториот елемент од оваа листа се
 # деливи со 5.
 # aTuple = ("orange", [10, 20, 30], (5, 15, 25))
