@@ -151,9 +151,11 @@ print(f"go imame slednoto resenie: {list16}.")
 # aTuple = ("orange", [10, 20, 30], (5, 15, 25))
 print('\nNo.17:\n')
 aTuple = ("orange", [10, 20, 30], (5, 15, 25))
-aLList = list(aTuple[1])+list(aTuple[2])
+# There are three standard sequence operations
+# that can be performed with tuple, list and string
+#  + , * , []
 nova_lista = []
-for num in aLList:
+for num in tuple(aTuple[1]) + aTuple[2]:
     if num % 5 != 0:
         nova_lista.append(False)
     else:
